@@ -13,11 +13,16 @@ int main()
 	string name[]{ "aya", "ben", "cloe", "derk" };
 	float hight[]{ 5.2f,5.1f,5.1f,5.3f };
 
+
+
 	for (int i = 0; i < 4; i++) {
-		outFile <<  age[i]<< "  " << name[i] << "  "<< hight[i] << endl;
+		outFile <<  age[i]<< "  " << name[i] << "  "<< hight[i] << endl;	
+
 		
 	}
 
+	int newsize = sizeof(name) / sizeof(*name);
+	cout << "kid amound "<< newsize << endl;
 	outFile.close();
 
 	return 1;
