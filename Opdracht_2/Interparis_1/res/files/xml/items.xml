@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--html rouls-->
+<items>
+  <items isActive="no">
+    <name> nike </name>
+    <cost>300</cost>
+    <ap>100</ap>
+    <descriprion>this is a nice hed</descriprion>
+  </items>
+
+<items>
+  <items isActive="no=">
+    <name> law of the sea </name>
+    <cost>300</cost>
+    <ap>100</ap>
+    <descriprion>this is a nice hed</descriprion>
+  </items>
+</items>
+</items>
+
