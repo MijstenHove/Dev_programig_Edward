@@ -6,11 +6,11 @@
 #include "dep/inc/xml/rapidxml_print.hpp"
 #include "dep/inc/xml/rapidxml_utils.hpp"
 
-int main(){
+int main() {
 	//get rapidxml ready
 	rapidxml::xml_document<> doc;
 	//open file
-	std::ifstream file("res/files/xml/bookstore.xml");
+	std::ifstream file("res/files/xml/config.xml");
 	//create buffer
 	std::stringstream buffer;
 	//copy the open file 
@@ -23,23 +23,31 @@ int main(){
 	//print the info 
 	std::cout << "name of the raiz:" << doc.first_node()->name() << "\n";
 	std::cout << "text of the raiz:" << doc.first_node()->name() << "\n";
-
+	std::cout << std::endl;
 	// get pointer to the first node 
 	rapidxml::xml_node<>* pRoot = doc.first_node();
 
-	//iterare each "book"
-	for (rapidxml::xml_node<>* pNode = pRoot->first_node("book"); pNode; pNode = pNode->next_sibling()) {
-		std::cout << pNode->name() << ":" << std::endl;
-
+	//iterare each "enemy"
+	for (rapidxml::xml_node<>* pNode = pRoot->first_node("enemy"); pNode; pNode = pNode->next_sibling()) {
+		std::cout << pNode->name() << ": "<< pNode->value() << std::endl;
+		
 		for (rapidxml::xml_node<>* pChild = pNode->first_node(); pChild; pChild = pChild->next_sibling()) {
-			std::cout << pChild-> name() << ":" << std::endl;
+			std::cout << pChild->name() << ": " << pChild->value() << std::endl;
 
-			//for (rapidxml::xml_attribute<>* pAtt = pChild->first_node(); pAtt; pChild = pAtt->next_sibling()) {
-				//std::cout << pAtt->name() << ":" << std::endl;
+			for (rapidxml::xml_node<>* pAdd = pChild->first_node(); pAdd; pAdd = pAdd->next_sibling()) {
+				
+				if (pAdd->next_sibling() != NULL)
+				{
+					std::cout << pAdd->name() << ": " << pAdd->value() << std::endl;
+				}
+			}
+
+
 
 		}
 		std::cout << std::endl;
 	}
+
 
 
 	return 0;

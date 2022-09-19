@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<enemies>
+
+  <enemy category="bowman">
+    <hp>100%</hp>
+    <Experience>10%</Experience>
+    <Attack>30%</Attack>
+    <wapon>
+      <name_wapon>longbow</name_wapon>
+      <type>bow</type>
+      <range>7</range>
+    </wapon>
+    <wapon>
+      <name_wapon>crossbow</name_wapon>
+      <type>bow</type>
+      <range>10</range>
+    </wapon>
+    <wapon>
+      <name_wapon>stab knife</name_wapon>
+      <type>knife</type>
+      <range>1</range>
+    </wapon>
+  </enemy>
+
+  <enemy category="bucher">
+    <hp>70%</hp>
+    <Experience>40%</Experience>
+    <Attack>70%</Attack>
+    <wapon>
+      <name_wapon>small ax</name_wapon>
+      <type>ax</type>
+      <range>3</range>
+    </wapon>
+    <wapon>
+      <name_wapon>dubbel handed ax</name_wapon>
+      <type>ax</type>
+      <range>4</range>
+    </wapon>
+    <wapon>
+      <name_wapon>bucherknife</name_wapon>
+      <type>knife</type>
+      <range>2</range>
+    </wapon>
+  </enemy>
+
+  <enemy category="prinses">
+    <hp>30%</hp>
+    <Experience>70%</Experience>
+    <Attack>99%</Attack>
+    <wapon>
+      <name_wapon>queen swort</name_wapon>
+      <type>swort</type>
+      <range>4</range>
+    </wapon>
+    <wapon>
+      <name_wapon>mirror</name_wapon>
+      <type>sheeld</type>
+      <range>1</range>
+    </wapon>
+    <wapon>
+      <name_wapon>kisses</name_wapon>
+      <type>magic</type>
+      <range>7</range>
+    </wapon>
+  </enemy>
+
+  <enemy category="swordsman">
+    <hp>30%</hp>
+    <Experience>100%</Experience>
+    <Attack>20%</Attack>
+    <wapon>
+      <name_wapon>swort</name_wapon>
+      <type>swort</type>
+      <range>4</range>
+    </wapon>
+    <wapon>
+      <name_wapon>knife</name_wapon>
+      <type>knife</type>
+      <range>1</range>
+    </wapon>
+    <wapon>
+      <name_wapon>prins charming</name_wapon>
+      <type>magic</type>
+      <range>7</range>
+    </wapon>
+  </enemy>
+
+</enemies>
