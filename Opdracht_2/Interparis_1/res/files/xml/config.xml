@@ -7,17 +7,17 @@
     <Experience>10%</Experience>
     <Attack>30%</Attack>
     <wapon>
-      <name_wapon>longbow</name_wapon>
+      <IDname_wapon>longbow</IDname_wapon>
       <type>bow</type>
       <range>7</range>
     </wapon>
     <wapon>
-      <name_wapon>crossbow</name_wapon>
+      <IDname_wapon>crossbow</IDname_wapon>
       <type>bow</type>
       <range>10</range>
     </wapon>
     <wapon>
-      <name_wapon>stab knife</name_wapon>
+      <IDname_wapon>stab knife</IDname_wapon>
       <type>knife</type>
       <range>1</range>
     </wapon>
@@ -28,17 +28,17 @@
     <Experience>40%</Experience>
     <Attack>70%</Attack>
     <wapon>
-      <name_wapon>small ax</name_wapon>
+      <IDname_wapon>small ax</IDname_wapon>
       <type>ax</type>
       <range>3</range>
     </wapon>
     <wapon>
-      <name_wapon>dubbel handed ax</name_wapon>
+      <IDname_wapon>dubbel handed ax</IDname_wapon>
       <type>ax</type>
       <range>4</range>
     </wapon>
     <wapon>
-      <name_wapon>bucherknife</name_wapon>
+      <IDname_wapon>bucherknife</IDname_wapon>
       <type>knife</type>
       <range>2</range>
     </wapon>
@@ -49,17 +49,17 @@
     <Experience>70%</Experience>
     <Attack>99%</Attack>
     <wapon>
-      <name_wapon>queen swort</name_wapon>
+      <IDname_wapon>queen swort</IDname_wapon>
       <type>swort</type>
       <range>4</range>
     </wapon>
     <wapon>
-      <name_wapon>mirror</name_wapon>
+      <IDname_wapon>mirror</IDname_wapon>
       <type>sheeld</type>
       <range>1</range>
     </wapon>
     <wapon>
-      <name_wapon>kisses</name_wapon>
+      <IDname_wapon>kisses</IDname_wapon>
       <type>magic</type>
       <range>7</range>
     </wapon>
@@ -70,17 +70,17 @@
     <Experience>100%</Experience>
     <Attack>20%</Attack>
     <wapon>
-      <name_wapon>swort</name_wapon>
+      <IDname_wapon>swort</IDname_wapon>
       <type>swort</type>
       <range>4</range>
     </wapon>
     <wapon>
-      <name_wapon>knife</name_wapon>
+      <IDname_wapon>knife</IDname_wapon>
       <type>knife</type>
       <range>1</range>
     </wapon>
     <wapon>
-      <name_wapon>prins charming</name_wapon>
+      <IDname_wapon>prins charming</IDname_wapon>
       <type>magic</type>
       <range>7</range>
     </wapon>

@@ -6,6 +6,20 @@
 #include "dep/inc/xml/rapidxml_print.hpp"
 #include "dep/inc/xml/rapidxml_utils.hpp"
 
+
+using namespace std;
+
+void printfunc(rapidxml::xml_node<>* pRood) {
+	
+
+	
+
+
+	std::cout << pRood->name() << ": " << pRood->value() << std::endl;
+}
+
+
+
 int main() {
 	//get rapidxml ready
 	rapidxml::xml_document<> doc;
@@ -22,33 +36,32 @@ int main() {
 
 	//print the info 
 	std::cout << "name of the raiz:" << doc.first_node()->name() << "\n";
-	std::cout << "text of the raiz:" << doc.first_node()->name() << "\n";
 	std::cout << std::endl;
 	// get pointer to the first node 
 	rapidxml::xml_node<>* pRoot = doc.first_node();
 
+	// list the enemies
+
+
 	//iterare each "enemy"
 	for (rapidxml::xml_node<>* pNode = pRoot->first_node("enemy"); pNode; pNode = pNode->next_sibling()) {
-		std::cout << pNode->name() << ": "<< pNode->value() << std::endl;
-		
-		for (rapidxml::xml_node<>* pChild = pNode->first_node(); pChild; pChild = pChild->next_sibling()) {
-			std::cout << pChild->name() << ": " << pChild->value() << std::endl;
+		printfunc(pNode);
 
+		for (rapidxml::xml_node<>* pChild = pNode->first_node(); pChild; pChild = pChild->next_sibling()) {
+			printfunc(pChild);
+			std::cout << std::endl;
+			
+			//wapons
 			for (rapidxml::xml_node<>* pAdd = pChild->first_node(); pAdd; pAdd = pAdd->next_sibling()) {
-				
-				if (pAdd->next_sibling() != NULL)
-				{
-					std::cout << pAdd->name() << ": " << pAdd->value() << std::endl;
+
+				if (pAdd->next_sibling() != NULL){
+					printfunc(pAdd);
 				}
 			}
-
-
-
 		}
-		std::cout << std::endl;
 	}
 
-
-
+	
+	std::cout << std::endl;
 	return 0;
 }
