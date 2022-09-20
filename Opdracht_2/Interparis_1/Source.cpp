@@ -5,22 +5,17 @@
 #include "dep/inc/xml/rapidxml_iterators.hpp"
 #include "dep/inc/xml/rapidxml_print.hpp"
 #include "dep/inc/xml/rapidxml_utils.hpp"
-
+#include <list>
 
 using namespace std;
 
 void printfunc(rapidxml::xml_node<>* pRood) {
-	
-
-	
-
-
 	std::cout << pRood->name() << ": " << pRood->value() << std::endl;
 }
 
-
-
 int main() {
+	//list <string>enemylist ();
+
 	//get rapidxml ready
 	rapidxml::xml_document<> doc;
 	//open file
@@ -41,27 +36,23 @@ int main() {
 	rapidxml::xml_node<>* pRoot = doc.first_node();
 
 	// list the enemies
-
-
+	
 	//iterare each "enemy"
 	for (rapidxml::xml_node<>* pNode = pRoot->first_node("enemy"); pNode; pNode = pNode->next_sibling()) {
 		printfunc(pNode);
 
 		for (rapidxml::xml_node<>* pChild = pNode->first_node(); pChild; pChild = pChild->next_sibling()) {
 			printfunc(pChild);
-			std::cout << std::endl;
 			
 			//wapons
 			for (rapidxml::xml_node<>* pAdd = pChild->first_node(); pAdd; pAdd = pAdd->next_sibling()) {
-
-				if (pAdd->next_sibling() != NULL){
 					printfunc(pAdd);
-				}
+
 			}
 		}
+		std::cout << std::endl;
 	}
 
 	
-	std::cout << std::endl;
 	return 0;
 }

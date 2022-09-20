@@ -1,24 +1,43 @@
 #include<fstream>
 #include <sstream>
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 // to create random numbers 
 #include <cstdalign>
 #include<time.h>
 int main() {
-
-	int a[10];
-
+	std::vector<int> grades;
 
 	for (int i = 0; i < 10; i++) {
-		a[i] = i;
+		grades.push_back(i)
 	}
-	std::ofstream myFile;
-	myFile.open("save.dat", std::ios::out | std::ios::binary);
+	
+	int size = grades.size()
+	
+	srand(time(NULL));
 
-	myFile.write(reinterpret_cast<char*>(&a), sizeof(int) * 10);
+	std::string s = "hola k ase";
+	int a[10];
+
+	std::ofstream myFile;
+	myFile.open("save.dat", std::ios::out | std::ios::binary | std::ios::trunc);
+	// writing the size of the string 
+	size_t size = s.size();
+
+
+	myFile.write(reinterpret_cast<char*>(&a), sizeof(size_t));
 	myFile.close();
+	
+	std::ifstream myFileIN;
+	myFileIN.open("save.dat", std::ios::in | std::ios::binary);
+
+	//read the file 
+	myFileIN.read(reinterpret_cast<char*>(&a), sizeof(int) * 10);
+	myFileIN.close();
+
 
 	std::cout << sizeof(char);
 	for (int i = 0; i < 10; i++) {
@@ -27,18 +46,22 @@ int main() {
 		std::cout << a[i] << " - ";
 	}
 
-	std::ifstream myFileIN;
-	myFileIN.open("save.dat", std::ios::in | std::ios::binary);
-
 	//cheak file corect
 	if (!myFileIN.is_open()) {
 		std::cout << "could not open file in " << std::endl;
 		return 1; 
 	}
+	//read the size of the string
+	size_t inSize;
+	myFileIN.read(reinterpret_cast<char*>(&inSize), sizeof(size_t));
+	char* ptr = new char[inSize + 1];
+	myFileIN.read(ptr, inSize);
+	ptr[inSize] = '\0';
+	std::string instring = ptr;
 
-	//read the file 
-	myFileIN.read(reinterpret_cast<char*>(&a), sizeof(int) * 10);
+	delete[] ptr;
 	myFileIN.close();
 
+	//meet.goolge.com/sif-zwzt-mqm this was on the bord 
 	return 0;
 }

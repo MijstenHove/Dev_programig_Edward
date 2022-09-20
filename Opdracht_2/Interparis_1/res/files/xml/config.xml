@@ -2,14 +2,16 @@
 
 <enemies>
 
-  <enemy category="bowman">
-    <hp>100%</hp>
-    <Experience>10%</Experience>
-    <Attack>30%</Attack>
+  <enemy>
+    <enemyS>
+     <hp>100</hp>
+     <Experience>10</Experience>
+     <Attack>30</Attack>
+    </enemyS>
     <wapon>
-      <IDname_wapon>longbow</IDname_wapon>
-      <type>bow</type>
-      <range>7</range>
+     <IDname_wapon>longbow</IDname_wapon>
+     <type>bow</type>
+     <range>7</range>
     </wapon>
     <wapon>
       <IDname_wapon>crossbow</IDname_wapon>
@@ -19,14 +21,16 @@
     <wapon>
       <IDname_wapon>stab knife</IDname_wapon>
       <type>knife</type>
-      <range>1</range>
+      <range>2</range>
     </wapon>
   </enemy>
 
-  <enemy category="bucher">
-    <hp>70%</hp>
-    <Experience>40%</Experience>
-    <Attack>70%</Attack>
+  <enemy>
+    <enemyS>
+      <hp>70</hp>
+      <Experience>40</Experience>
+      <Attack>70</Attack>
+    </enemyS>
     <wapon>
       <IDname_wapon>small ax</IDname_wapon>
       <type>ax</type>
@@ -44,10 +48,11 @@
     </wapon>
   </enemy>
 
-  <enemy category="prinses">
-    <hp>30%</hp>
-    <Experience>70%</Experience>
-    <Attack>99%</Attack>
+  <enemy>
+    <enemyS>
+    <hp>30</hp>
+    <Experience>70</Experience>
+    <Attack>99</Attack>
     <wapon>
       <IDname_wapon>queen swort</IDname_wapon>
       <type>swort</type>
@@ -63,12 +68,15 @@
       <type>magic</type>
       <range>7</range>
     </wapon>
+      </enemyS>
   </enemy>
 
-  <enemy category="swordsman">
-    <hp>30%</hp>
-    <Experience>100%</Experience>
-    <Attack>20%</Attack>
+  <enemy>
+    <enemyS>
+     <hp>30</hp>
+     <Experience>100</Experience>
+     <Attack>20</Attack>
+    </enemyS>
     <wapon>
       <IDname_wapon>swort</IDname_wapon>
       <type>swort</type>
