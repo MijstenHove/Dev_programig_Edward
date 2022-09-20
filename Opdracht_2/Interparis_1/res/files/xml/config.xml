@@ -3,11 +3,11 @@
 <enemies>
 
   <enemy>
-    <enemyS>
+    
      <hp>100</hp>
      <Experience>10</Experience>
      <Attack>30</Attack>
-    </enemyS>
+    <wapons>
     <wapon>
      <IDname_wapon>longbow</IDname_wapon>
      <type>bow</type>
@@ -23,14 +23,14 @@
       <type>knife</type>
       <range>2</range>
     </wapon>
+    </wapons>
   </enemy>
 
   <enemy>
-    <enemyS>
       <hp>70</hp>
       <Experience>40</Experience>
       <Attack>70</Attack>
-    </enemyS>
+    <wapons>
     <wapon>
       <IDname_wapon>small ax</IDname_wapon>
       <type>ax</type>
@@ -46,13 +46,15 @@
       <type>knife</type>
       <range>2</range>
     </wapon>
+    </wapons>
   </enemy>
 
   <enemy>
-    <enemyS>
+
     <hp>30</hp>
     <Experience>70</Experience>
     <Attack>99</Attack>
+    <wapons>
     <wapon>
       <IDname_wapon>queen swort</IDname_wapon>
       <type>swort</type>
@@ -68,15 +70,15 @@
       <type>magic</type>
       <range>7</range>
     </wapon>
-      </enemyS>
+    </wapons>
   </enemy>
 
   <enemy>
-    <enemyS>
+
      <hp>30</hp>
      <Experience>100</Experience>
      <Attack>20</Attack>
-    </enemyS>
+    <wapons>
     <wapon>
       <IDname_wapon>swort</IDname_wapon>
       <type>swort</type>
@@ -92,6 +94,7 @@
       <type>magic</type>
       <range>7</range>
     </wapon>
+    </wapons>
   </enemy>
 
 </enemies>

@@ -7,17 +7,25 @@
 #include "dep/inc/xml/rapidxml_utils.hpp"
 
 using namespace std;
+class printWapon {
+public:
+
+	string IDwapon;
+	string type;
+	string range;
+
+
+};
+
 class printEnemy {
 public:
 	//info enemy
-	std::string name; 
-	int hp;
-	int Experience;
-	int Attack;
-
-	//wapon
-	std::string IDwapon;
-	std::string type;
-	int range;
+	string hp;
+	string experience;
+	string attack;
+	
+	
+	std::cout <<hp<< std::endl;
+	vector<printWapon> wapons;
 
 };
