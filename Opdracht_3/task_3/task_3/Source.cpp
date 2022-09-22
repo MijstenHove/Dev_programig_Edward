@@ -12,10 +12,10 @@ int main() {
 	std::vector<int> grades;
 
 	for (int i = 0; i < 10; i++) {
-		grades.push_back(i)
+		grades.push_back(i);
 	}
 	
-	int size = grades.size()
+	int size = grades.size();
 	
 	srand(time(NULL));
 
