@@ -1,6 +1,7 @@
 #include <sstream>
 #include <iostream>
 #include <ios>
+#include <ostream>
 #include "dep/inc/xml/rapidxml.hpp"
 #include "dep/inc/xml/rapidxml_iterators.hpp"
 #include "dep/inc/xml/rapidxml_print.hpp"
@@ -11,19 +12,22 @@
 using namespace std;
 
 int printfunc(string a, string b, string c) {
-	//std::cout << pRood->name() << ": " << pRood->value() << std::endl;
 
 	printEnemy printenemy;
 	 
-	//for (int i = 0; i < wapons.size(); i++) {
-	//cout << wapons[i].range;
-	//}
-	//std::cout << printenemy.name << endl;
+	for (int i = 0; i < printenemy.wapons.size(); i++) {
+		
+	
+			cout << printenemy.wapons[i] << endl;
+		
+	}
 	return 0;
 }
 
 
 int main() {
+
+
 	//list <string>enemylist ();
 
 	//get rapidxml ready
@@ -44,7 +48,6 @@ int main() {
 	std::cout << std::endl;
 	// get pointer to the first node 
 	rapidxml::xml_node<>* pRoot = doc.first_node();
-
 	vector <printEnemy> printenemy;
 	
 	//iterare each "enemy"
@@ -55,10 +58,9 @@ int main() {
 		string newEP = pNode->first_node("Experience")->value();
 		string newAttack = pNode->first_node("Attack")->value();
 
-		
-		newEnemy = printfunc(newHP, newEP, newAttack);
-		
-
+		std::cout << newHP << std::endl;
+		//newEnemy = newEnemy(nHP, newEP, newAttack);
+	
 		//wepon
 		string newEnemyName = pNode->first_node("wapon")->value();
 		for (rapidxml::xml_node<>* pChild = pNode->first_node("wapons"); pChild; pChild = pChild->next_sibling()) {
@@ -67,7 +69,7 @@ int main() {
 			string newID = pNode->first_node("IDwapon")->value();
 			string newType = pNode->first_node("type")->value();
 			string newRange = pNode->first_node("range")->value();
-			newwapon = printfunc(newID, newType, newRange);
+			//newwapon = printWapon(newID, newType, newRange);
 		}
 		printenemy.push_back(newEnemy);
 
