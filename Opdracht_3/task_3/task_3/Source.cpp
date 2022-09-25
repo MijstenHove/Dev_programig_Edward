@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+
+
 using namespace std;
 
 // to create random numbers 
@@ -25,7 +27,7 @@ int main() {
 	std::ofstream myFile;
 	myFile.open("save.dat", std::ios::out | std::ios::binary | std::ios::trunc);
 	// writing the size of the string 
-	size_t size = s.size();
+	std::size_t strSize = s.size();
 
 
 	myFile.write(reinterpret_cast<char*>(&a), sizeof(size_t));
@@ -48,9 +50,15 @@ int main() {
 
 	//cheak file corect
 	if (!myFileIN.is_open()) {
-		std::cout << "could not open file in " << std::endl;
+		std::cout << "could open file in " << std::endl;
 		return 1; 
 	}
+	else
+	{
+		std::cout << "could not open file in " << std::endl;
+		return 1;
+	}
+
 	//read the size of the string
 	size_t inSize;
 	myFileIN.read(reinterpret_cast<char*>(&inSize), sizeof(size_t));
