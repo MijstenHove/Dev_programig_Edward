@@ -31,53 +31,66 @@ using namespace std;
 	void RecoverObjects(std::vector<GameObject>& o, std::string fileName);
 
 	int main() {
-		string SfileName = "save.dat";
-		fstream f;
-		f.open("save.dat", ios::out | ios::binary);
-
 		std::vector<GameObject> objecs;
 		std::list<Enemy> enemies;
+
+		//time of the computer
+		srand(time(NULL));
 
 		//putting a new character at the back 
 		objecs.push_back({ 'c',1,2 });
 		objecs.push_back({ 'a',1,2 });
+		objecs.push_back({ 'b',1,5 });
+		
+		//opening file
+		string SfileName = "save.dat";
 
-		int size = objecs.size();
+		//getting list size 
+		//int sizeobjecs = objecs.size();
 
-		for (size_t i = 0; i < size; i++)
-		{
-			cout << objecs[i].type << endl;
-		}
 
 		SaveObjects(objecs, SfileName);
 		RecoverObjects(objecs, SfileName);
-		
-		//read the file 
-	
+
+
+
+		return 0;
 	}
 
 void SaveObjects(std::vector<GameObject> o, std::string fileName) {
 	//openfile
 	std::ofstream myFile;
 	myFile.open(fileName, std::ios::out | std::ios::binary | std::ios::trunc);
-
 	// writing the size of the object
 	std::size_t strSize = o.size();
 	myFile.write(reinterpret_cast<char*>(&o), sizeof(size_t));
 	myFile.close();
+
+
+	//check file corect
+	if (!myFile.is_open()) {
+		std::cout << "file is closed  " << std::endl;
+	}
+	else {
+		std::cout << "file is open " << std::endl;;
+	}
 }
 
 void RecoverObjects(std::vector<GameObject>& o, std::string fileName) {
+	//openfile
 	std::ifstream myFileIN;
 	myFileIN.open(fileName, std::ios::in | std::ios::binary);
+	// reading the file 
 	myFileIN.read(reinterpret_cast<char*>(&o), sizeof(int) * 10);
 	myFileIN.close();
-
-	//cheak file corect
+	//check file corect
 	if (!myFileIN.is_open()) {
-		std::cout << "file is closed  " << std::endl;
+		std::cout << "fileIn is closed  " << std::endl;
 	}
 	else{
-		std::cout << "file is open " << std::endl;;
+		std::cout << "fileIn is open " << std::endl;;
 	}
+
+
+
 }

@@ -21,27 +21,26 @@ int main() {
 	
 	srand(time(NULL));
 
-	std::string s = "hola k ase";
+	std::string s = "hot as fuck";
 	int a[10];
 
 	std::ofstream myFile;
 	myFile.open("save.dat", std::ios::out | std::ios::binary | std::ios::trunc);
 	// writing the size of the string 
 	std::size_t strSize = s.size();
-
-
 	myFile.write(reinterpret_cast<char*>(&a), sizeof(size_t));
 	myFile.close();
 	
+
+
 	std::ifstream myFileIN;
 	myFileIN.open("save.dat", std::ios::in | std::ios::binary);
-
 	//read the file 
 	myFileIN.read(reinterpret_cast<char*>(&a), sizeof(int) * 10);
 	myFileIN.close();
 
 
-	std::cout << sizeof(char);
+	std::cout << sizeof(char)<<endl;
 	for (int i = 0; i < 10; i++) {
 		a[i] = rand() % 100;
 
@@ -50,12 +49,12 @@ int main() {
 
 	//cheak file corect
 	if (!myFileIN.is_open()) {
-		std::cout << "could open file in " << std::endl;
+		std::cout << "file closed " << std::endl;
 		return 1; 
 	}
 	else
 	{
-		std::cout << "could not open file in " << std::endl;
+		std::cout << "file open " << std::endl;
 		return 1;
 	}
 
