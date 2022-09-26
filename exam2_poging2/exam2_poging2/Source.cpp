@@ -24,14 +24,14 @@ struct Weapen{
 
 struct Enemy 
 {
-	char id[10];
+	char id;
 	int x;
 	float y;
-	std::vector<Weapen> enemies;
+	std::vector<Weapen> weapon;
 };
 
 
-void SaveObjects(std::vector<GameObject>& o, std::string fileName);
+void SaveObjects(std::vector<GameObject> o, std::string fileName);
 void RecoverObjects(std::vector<GameObject>& o, std::string fileName);
 
 void SaveEnemies(std::list<Enemy> e, std::string fileName);
@@ -53,10 +53,12 @@ int main() {
 
 
 	std::list<Enemy> enemies = {
-		{"king", 1, 4.5},
-		{"knight", 2, 3.5},
-		{"bucher", 3, 2.5}
+		{'a',2,4,{{"knife",2},{"ax",5}}},
+		{'b',2,4,{{"ax",2},{"ax",5}}},
+		{'c',2,4,{{"bow",6},{"knife",5}}}
 	};
+	
+
 	SaveEnemies(enemies, savefile);
 	RecoverEnemies(enemies, savefile);
 
@@ -72,7 +74,7 @@ int main() {
  return 0;
 }
 
-void SaveObjects(std::vector<GameObject>& o, std::string fileName) {
+void SaveObjects(std::vector<GameObject> o, std::string fileName) {
 	fstream f;
 
 	f.open(fileName, ios::out | ios::binary | std::ios::trunc);
@@ -89,7 +91,7 @@ void SaveObjects(std::vector<GameObject>& o, std::string fileName) {
 
 }
 
-void RecoverObjects(std::vector<GameObject>& o, std::string fileName) {
+void RecoverObjects(std::vector<GameObject> &o, std::string fileName) {
 	fstream f;
 
 	f.open(fileName, ios::in | ios::binary | std::ios::trunc);
@@ -105,7 +107,6 @@ void RecoverObjects(std::vector<GameObject>& o, std::string fileName) {
 
 		f.close();
 	}
-
 
 	for (GameObject gm : o){
 		std::cout << gm.type << endl;
@@ -150,9 +151,11 @@ void RecoverEnemies(std::list<Enemy>& e, std::string fileName) {
 
 
 	for (Enemy& en : e) {
-		std::cout << en.id << endl;
-		std::cout << en.x << endl;
-		std::cout << en.y << endl;
+		std::cout << en.id << "-" << en.x << "-" << en.y << endl;
+		
+		for (Weapen& wa : en.weapon) {
+			std::cout << wa.name <<"-" <<wa.power<< endl;
+		}
 	}
 }
 
