@@ -2,27 +2,72 @@
 #include <sstream>
 #include <iostream>
 #include <vector>
+#include <list>
+#include <map>
 using namespace std;
+
 
 // to create random numbers 
 #include <cstdalign>
 #include<time.h>
 
-struct GameObject
-{
-	char name[50];
-	int age;
-	float gpa;
+struct GameObject{
+	char type;
+	int x;
+	int y;
 };
+
+struct Weapen{
+	char name[10];
+	int power;
+};
+
+struct Enemy 
+{
+	char id[10];
+	int x;
+	float y;
+	std::vector<Weapen> enemies;
+};
+
 
 void SaveObjects(std::vector<GameObject>& o, std::string fileName);
 void RecoverObjects(std::vector<GameObject>& o, std::string fileName);
+
+void SaveEnemies(std::list<Enemy> e, std::string fileName);
+void RecoverEnemies(std::list<Enemy>& e, std::string fileName);
+
+void SaveMap(std::map<std::string, int> m, std::string fileName);
+void RecoverMap(std::map<std::string, int>& m, std::string bestandsnaam);
+
 int main() {
+	string savefile = "save.dat";
+
 	std::vector<GameObject> objecs;
-	objecs.push_back ({ "mijs",23, 3.5 });
-	
-	SaveObjects(objecs, "save.dat");
-	RecoverObjects(objecs, "save.dat");
+	objecs.push_back({ 'a',23, 6 });
+	objecs.push_back({ 'b',22, 5 });
+	objecs.push_back({ 'c',13, 5 });
+
+	SaveObjects(objecs, savefile);
+	RecoverObjects(objecs, savefile);
+
+
+	std::list<Enemy> enemies = {
+		{"king", 1, 4.5},
+		{"knight", 2, 3.5},
+		{"bucher", 3, 2.5}
+	};
+	SaveEnemies(enemies, savefile);
+	RecoverEnemies(enemies, savefile);
+
+	std::map<std::string, int> myMap = {
+		{"player", 1},
+		{"enemy1", 1},
+		{"enemy2", 1},
+	};
+	SaveMap(myMap, savefile);
+	RecoverMap(myMap, savefile);
+
 
  return 0;
 }
@@ -31,8 +76,6 @@ void SaveObjects(std::vector<GameObject>& o, std::string fileName) {
 	fstream f;
 
 	f.open(fileName, ios::out | ios::binary | std::ios::trunc);
-
-
 	f.write(reinterpret_cast<char*>(&o), sizeof(o));
 	f.close();
 
@@ -50,8 +93,6 @@ void RecoverObjects(std::vector<GameObject>& o, std::string fileName) {
 	fstream f;
 
 	f.open(fileName, ios::in | ios::binary | std::ios::trunc);
-
-
 	f.read(reinterpret_cast<char*>(&o), sizeof(o));
 	f.close();
 
@@ -67,8 +108,92 @@ void RecoverObjects(std::vector<GameObject>& o, std::string fileName) {
 
 
 	for (GameObject gm : o){
-		std::cout << gm.name << endl;
-		std::cout << gm.age << endl;
-		std::cout << gm.gpa << endl;
+		std::cout << gm.type << endl;
+		std::cout << gm.x << endl;
+		std::cout << gm.y << endl;
 	}
+}
+
+
+void SaveEnemies(std::list<Enemy> e, std::string fileName){
+	fstream f;
+
+	f.open(fileName, ios::out | ios::binary | std::ios::trunc);
+	f.write(reinterpret_cast<char*>(&e), e.size() * sizeof(e));
+	f.close();
+
+	if (!f.is_open()) {
+		std::cout << "file is closed  " << std::endl;
+	}
+	else {
+		std::cout << "file is open " << std::endl;;
+		f.close();
+	}
+}
+
+void RecoverEnemies(std::list<Enemy>& e, std::string fileName) {
+	fstream f;
+
+	f.open(fileName, ios::in | ios::binary | std::ios::trunc);
+	f.read(reinterpret_cast<char*>(&e), e.size()*sizeof(e));
+	f.close();
+
+
+	if (!f.is_open()) {
+		std::cout << "file is closed  " << std::endl;
+	}
+	else {
+		std::cout << "file is open " << std::endl;;
+
+		f.close();
+	}
+
+
+	for (Enemy& en : e) {
+		std::cout << en.id << endl;
+		std::cout << en.x << endl;
+		std::cout << en.y << endl;
+	}
+}
+
+
+void SaveMap(std::map<std::string, int> m, std::string fileName) {
+	fstream f;
+	f.open(fileName, ios::out | ios::binary | std::ios::trunc);
+	f.write(reinterpret_cast<char*>(&m), sizeof(m));
+	f.close();
+
+	if (!f.is_open()) {
+		std::cout << "file is closed  " << std::endl;
+	}
+	else {
+		std::cout << "file is open " << std::endl;;
+		f.close();
+	}
+}
+
+void RecoverMap(std::map<std::string, int>& m, std::string fileName) {
+	fstream f;
+
+	f.open(fileName, ios::in | ios::binary | std::ios::trunc);
+	f.read(reinterpret_cast<char*>(&m), sizeof(m));
+	f.close();
+
+
+	if (!f.is_open()) {
+		std::cout << "file is closed  " << std::endl;
+	}
+	else {
+		std::cout << "file is open " << std::endl;;
+
+		f.close();
+	}
+
+
+	for (auto pair: m) {
+		std::cout << pair.first << "-"<< pair.second<<endl;
+	}
+
+
+
 }
