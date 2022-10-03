@@ -14,7 +14,7 @@ int main()
 	OptionsScene optionscene;
 
 	std::vector<Scene*> scenes;
-
+	//what am i diong here 
 	scenes.push_back(&menu);
 	scenes.push_back(&gamescene);
 	scenes.push_back(&optionscene);
@@ -36,10 +36,6 @@ int main()
 		// update scene
 		scenes[currendScene]->Update();
 	};
-
-			
-	
 	return 0; 
-
 
 }

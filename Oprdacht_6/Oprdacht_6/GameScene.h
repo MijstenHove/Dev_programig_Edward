@@ -10,8 +10,8 @@ public:
 	virtual void Update()override {};
 	virtual void Draw() override {
 
-
 		std::cout << "game menu " << std::endl;
+
 	};
 	virtual void End(unsigned int& targetscene, bool& keepPlaying) override {};
 
