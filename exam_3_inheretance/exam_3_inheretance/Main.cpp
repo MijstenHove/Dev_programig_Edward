@@ -1,25 +1,38 @@
-#include "RenderMenager.h"
-#include "Animation2D.h"
-#include "Image.h"
-#include "Model3D.h"
+#include"MenuMenager.h"
+#include"MainMenu.h"
+#include"Leaderboard.h"
+#include"PauseMenu.h"
 
+#include<vector>
 
-int main(){
+int main() {
 
 	unsigned int currendScene = 0;
-	
-	Image image;
-	Animation2D animation2d;
-	Model3D model3d;
+	bool isPlaying = true;
 
-	std::vector<RenderMenager*> rendermenager;
-	//what am i diong here 
-	rendermenager.push_back(&image);
-	rendermenager.push_back(&animation2d);
-	rendermenager.push_back(&model3d);
-	
+	MainMenu mainmenu;
+	Leaderboard leaderbord;
+	PauseMenu pausemenu;
 
-	rendermenager[currendScene]->Draw();
-	std::cout << "end" << std::endl;
-	return 0;
+	std::vector<MenuMenager*> menumenager;
+	menumenager.push_back(&mainmenu);
+	menumenager.push_back(&leaderbord);
+	menumenager.push_back(&pausemenu);
+
+	while (isPlaying) {
+		//change scene?
+		if (menumenager[currendScene]->menuFinished)
+		{
+			menumenager[currendScene]->End(currendScene, isPlaying);
+			if (!isPlaying)
+			{
+				break;
+			}
+			menumenager[currendScene]->Start();
+		};
+
+		menumenager[currendScene]->DrawText();
+		std::cout << "end" << std::endl;
+		return 0;
+	};
 }

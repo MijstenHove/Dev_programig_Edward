@@ -4,10 +4,10 @@
 class Scene{
 public:
 	int ID;
-	std::string name;
+	//std::string name;
 	bool sceneFinished;
 
-	Scene() { ID = -1; name = "invalid"; sceneFinished = false; };
+	Scene() { ID = -1; sceneFinished = false; };
 	virtual void Start() = 0;
 	virtual void Update() = 0;
 	virtual void Draw() = 0;

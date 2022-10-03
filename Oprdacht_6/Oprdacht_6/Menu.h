@@ -8,7 +8,7 @@ public:
 	MenuScene()
 		:Scene() {
 		ID = 0;
-		name = "name";
+		//name = "name";
 		sceneFinished = false;
 	};
 

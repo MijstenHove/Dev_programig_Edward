@@ -132,7 +132,11 @@
   <ItemGroup>
     <ClInclude Include="Animation2D.h" />
     <ClInclude Include="Image.h" />
+    <ClInclude Include="Leaderboard.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MenuMenager.h" />
     <ClInclude Include="Model3D.h" />
+    <ClInclude Include="PauseMenu.h" />
     <ClInclude Include="RenderMenager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
