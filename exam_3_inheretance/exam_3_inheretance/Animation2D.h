@@ -1,5 +1,5 @@
 #pragma once
-#include "RenderMenager.h"
+/*#include "RenderMenager.h"
 
 class Animation2D : public RenderMenager {
 public:
@@ -12,4 +12,4 @@ private:
 	int xpos = 0;
 	int ypos = 0; 
 };
-
+*/

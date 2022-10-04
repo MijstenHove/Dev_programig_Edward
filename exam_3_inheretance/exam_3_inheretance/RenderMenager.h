@@ -1,5 +1,5 @@
 #pragma once
-
+/*
 #include <string>
 #include <vector>
 #include<iostream>
@@ -24,12 +24,11 @@ public:
 			    {
 				std::cout << "this is: " << object[i]<< std::endl;
 			    };
-				
 				std::cout << object.size() << std::endl;
 		    };
  
 
-};
+};*/
 
 
 

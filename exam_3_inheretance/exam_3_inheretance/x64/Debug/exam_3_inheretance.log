@@ -1,3 +1,1 @@
-﻿  Main.cpp
-Main.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl MainMenu::Update(void)" (?Update@MainMenu@@UEAAXXZ)
-C:\Users\mijst\Documents\Git\Dev_programing_Edward\exam_3_inheretance\x64\Debug\exam_3_inheretance.exe : fatal error LNK1120: 1 unresolved externals
+﻿  exam_3_inheretance.vcxproj -> C:\Users\mijst\Documents\Git\Dev_programing_Edward\exam_3_inheretance\x64\Debug\exam_3_inheretance.exe

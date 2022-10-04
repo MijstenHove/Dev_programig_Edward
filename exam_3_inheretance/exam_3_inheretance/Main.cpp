@@ -1,3 +1,4 @@
+
 #include"MenuMenager.h"
 #include"MainMenu.h"
 #include"Leaderboard.h"
@@ -6,7 +7,6 @@
 #include<vector>
 
 int main() {
-
 	unsigned int currendScene = 0;
 	bool isPlaying = true;
 
@@ -30,9 +30,8 @@ int main() {
 			}
 			menumenager[currendScene]->Start();
 		};
-
 		menumenager[currendScene]->DrawText();
-		std::cout << "end" << std::endl;
-		return 0;
+		menumenager[currendScene]->Update();
 	};
+	return 0;
 }

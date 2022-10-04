@@ -2,50 +2,36 @@
 #include <iostream>
 class MenuMenager
 {
-private:
-	char choice;
 public:
 	bool menuFinished;
+	char choice;
 	MenuMenager() { menuFinished = false; };
 	virtual void Start() = 0;
-	virtual void Update() {
-		std::cin >> choice;
-		if (choice == 'm' || choice == 'l' || choice == 'q' || choice == 'g' )
-		{
-			menuFinished = true;
-		}
-	
+		virtual void Update() {
+
+			std::cin >> choice;
+			if (choice == 'g' || choice == 'l' || choice == 'q' || choice == 'b')
+			{
+				menuFinished = true;
+			}
 	};
 	virtual void DrawText() = 0;
-	virtual void End(unsigned int& targetscene, bool& keepPlaying){
+	virtual void End(unsigned int& targetScene, bool& keepplaying){
 		switch (choice)
 		{
-		case 'm':
-			//main
-			targetscene = 0;
+		case 'b':
+			targetScene = 0;
 			break;
 		case 'l':
-			//leaderbord
-			targetscene = 1;
-			break;
-		case 'q':
-			//quit 
-			keepPlaying = false;
+			targetScene = 1;
 			break;
 		case 'g':
-			//Game 
-			targetscene = 2;
+			targetScene = 2;
 			break;
-		case 'p':
-			//pause
-			targetscene = 3;
+		case 'q':
+			keepplaying = false;
 			break;
-		};
-}
-
-
-private:
-
-
+		}
+	}
 };
 

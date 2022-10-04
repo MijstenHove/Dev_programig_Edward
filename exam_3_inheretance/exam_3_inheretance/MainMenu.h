@@ -3,12 +3,15 @@
 
 class MainMenu : public MenuMenager {
 private:
-	//char choice;
 public:
+	MainMenu()
+		:MenuMenager() {
+		menuFinished = false;
+	};
+
 	virtual void Start() override {};
-	virtual void Update();
 	virtual void DrawText() override {
-		std::cout << " welcome to main menu\n\n" << std::endl;
+		std::cout << " welcome to main menu" << std::endl;
 		std::cout << "G- game" << std::endl;
 		std::cout << "L- leaderbord" << std::endl;
 		std::cout << "Q- quit \n" << std::endl;
@@ -16,7 +19,4 @@ public:
 		std::cout << "enter choice: " << std::endl;
 
 	};
-	virtual void End(unsigned int& targetScene, bool& keepplaying) override {};
-
-
 };
