@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "RenderMenager.h"
 class MenuMenager
 {
 public:
@@ -7,7 +8,7 @@ public:
 	char choice;
 	MenuMenager() { menuFinished = false; };
 	virtual void Start() = 0;
-		virtual void Update() {
+	virtual void Update() {
 
 			std::cin >> choice;
 			if (choice == 'g' || choice == 'l' || choice == 'q' || choice == 'b')

@@ -3,7 +3,7 @@
 #include"MainMenu.h"
 #include"Leaderboard.h"
 #include"PauseMenu.h"
-
+#include "RenderMenager.h"
 #include<vector>
 
 int main() {
@@ -34,4 +34,5 @@ int main() {
 		menumenager[currendScene]->Update();
 	};
 	return 0;
+
 }
