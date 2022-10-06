@@ -1,19 +1,29 @@
 #pragma once
-#include <string>
+#include "Renderer.h"
+#include "Animation2D.h"
+#include "Image.h"
+#include "Model3D.h"
+
 #include <vector>
-#include<iostream>
-class RenderMenager
-{
-private:
+class RenderMenager {
 public:
-	bool FinishedDraw;
+	//what is the differense between this one ande the renderer? 
+	virtual void Draw() {
+		Image image;
+		Animation2D animation2d;
+		Model3D model3d;
 
-	RenderMenager() { FinishedDraw = false; };
+		std::vector<Renderer*> renderers;
+		renderers.push_back(&image);
+		renderers.push_back(&animation2d);
+		renderers.push_back(&model3d);
+	
 
-	virtual	void Draw() = 0;
+		for (int i = 0; i < renderers.size(); i++)
+		{
+			renderers[i]->Draw();
+		}
 
+	};
 };
-
-
-
 

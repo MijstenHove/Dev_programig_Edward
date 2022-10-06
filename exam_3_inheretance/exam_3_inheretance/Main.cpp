@@ -3,10 +3,17 @@
 #include"MainMenu.h"
 #include"Leaderboard.h"
 #include"PauseMenu.h"
+
 #include "RenderMenager.h"
+
 #include<vector>
 
 int main() {
+
+	RenderMenager rendermanager;
+
+	rendermanager.Draw();
+
 	unsigned int currendScene = 0;
 	bool isPlaying = true;
 

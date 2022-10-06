@@ -1,12 +1,17 @@
 #pragma once
 #include <iostream>
-#include "RenderMenager.h"
-class MenuMenager
+#include "Renderer.h"
+class MenuMenager 
 {
 public:
+	
+	
+	
+	//////////////////////////////////////////////
+	
 	bool menuFinished;
 	char choice;
-	MenuMenager() { menuFinished = false; };
+	MenuMenager() { menuFinished = false;};
 	virtual void Start() = 0;
 	virtual void Update() {
 

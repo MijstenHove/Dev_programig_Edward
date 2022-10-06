@@ -1,7 +1,6 @@
 #pragma once
-#include "RenderMenager.h"
-class Model3D : public RenderMenager
-{
+#include "Renderer.h"
+class Model3D : public Renderer{
 private:
 public:
 

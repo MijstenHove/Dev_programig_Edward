@@ -1,7 +1,6 @@
 #pragma once
-#include "RenderMenager.h"
-class Image : public RenderMenager
-{
+#include "Renderer.h"
+class Image : public Renderer{
 private:
 public:
 	virtual void Draw() override {

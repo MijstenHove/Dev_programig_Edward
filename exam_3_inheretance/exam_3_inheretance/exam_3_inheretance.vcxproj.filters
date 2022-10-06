@@ -24,6 +24,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuMenager.h">
@@ -38,7 +41,7 @@
     <ClInclude Include="Model3D.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
-    <ClInclude Include="RenderMenager.h">
+    <ClInclude Include="Renderer.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
     <ClInclude Include="MainMenu.h">
@@ -49,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="PauseMenu.h">
       <Filter>Header Files\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMenager.h">
+      <Filter>Header Files\renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
