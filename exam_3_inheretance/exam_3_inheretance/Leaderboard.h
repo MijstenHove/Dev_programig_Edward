@@ -1,7 +1,7 @@
 #pragma once
-#include "MenuMenager.h"
+#include "Menu.h"
 
-class Leaderboard : public MenuMenager {
+class Leaderboard : public Menu {
 private:
 
 public:

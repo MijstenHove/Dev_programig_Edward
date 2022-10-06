@@ -1,8 +1,8 @@
 #pragma once
-#include "MenuMenager.h"
+#include "Menu.h"
 #include "Image.h"
 
-class PauseMenu : public MenuMenager {
+class PauseMenu : public Menu {
 private:
 	Image image;
 public:

@@ -24,12 +24,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuMenager.h">
+    <ClInclude Include="Menu.h">
       <Filter>Header Files\menu</Filter>
     </ClInclude>
     <ClInclude Include="Animation2D.h">
@@ -55,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="RenderMenager.h">
       <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuManager.h">
+      <Filter>Header Files\menu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
