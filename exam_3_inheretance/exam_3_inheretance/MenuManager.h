@@ -9,6 +9,12 @@
 class MenuManager
 {
 public: 
+
+	std::vector<Menu*> menus;
+
+	void Draw() {};
+
+///////////////////////////moet ergens anders heen///////////////
 	virtual void Draw() {
 		unsigned int currendScene = 0;
 		bool isPlaying = true;
@@ -17,7 +23,6 @@ public:
 		Leaderboard leaderbord;
 		PauseMenu pausemenu;
 
-		std::vector<Menu*> menus;
 		menus.push_back(&mainmenu);
 		menus.push_back(&leaderbord);
 		menus.push_back(&pausemenu);

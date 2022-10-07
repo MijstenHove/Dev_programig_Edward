@@ -1,9 +1,16 @@
 #pragma once
 #include <iostream>
 #include "Renderer.h"
+
 class Menu 
 {
 public:
+	
+	std::vector<Renderer*> renderers;
+
+	//virtual void Draw() override;
+	
+	/////////////////moet ergens ander heen////////////////////
 	bool menuFinished;
 	char choice;
 	Menu() { menuFinished = false;};
