@@ -3,7 +3,7 @@
 class PauseMenu: Menu
 {
 
-   /* public override void Start() {
+   /*  override void Start() {
         renderers = new(){
             new Image(),
             new start / back to game (),

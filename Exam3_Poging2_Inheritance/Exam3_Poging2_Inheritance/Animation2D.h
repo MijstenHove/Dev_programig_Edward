@@ -6,7 +6,7 @@ public:
 	Animation2D(int a, int b);
 	~Animation2D();
 
-	//virtual void Draw() override;
+	
 
 
 };
