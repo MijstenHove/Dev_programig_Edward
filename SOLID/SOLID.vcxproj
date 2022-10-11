@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{185b6bb4-cf37-40db-80c3-4e7d9634d3b6}</ProjectGuid>
+    <RootNamespace>SOLID</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DIP\Common\Configuration.cpp" />
+    <ClCompile Include="DIP\Initial\ConfigurationGateway.cpp" />
+    <ClCompile Include="DIP\Initial\Consumer.cpp" />
+    <ClCompile Include="DIP\Solution\BinaryConfigurationGateway.cpp" />
+    <ClCompile Include="DIP\Solution\Consumer.cpp" />
+    <ClCompile Include="DIP\Solution\DIPMain.cpp" />
+    <ClCompile Include="DIP\Solution\XMLConfigurationGateway.cpp" />
+    <ClCompile Include="LSP\Initial\LSPConsumer.cpp" />
+    <ClCompile Include="LSP\Initial\Rectangle.cpp" />
+    <ClCompile Include="LSP\Initial\Square.cpp" />
+    <ClCompile Include="LSP\Solution\Rectangle.cpp" />
+    <ClCompile Include="LSP\Solution\Square.cpp" />
+    <ClCompile Include="OPC\Initial\RenderSystem.cpp" />
+    <ClCompile Include="OPC\Initial\Square.cpp" />
+    <ClCompile Include="OPC\Initial\Triangle.cpp" />
+    <ClCompile Include="OPC\Solution\Figure.cpp" />
+    <ClCompile Include="OPC\Solution\RenderSystem.cpp" />
+    <ClCompile Include="OPC\Solution\Square.cpp" />
+    <ClCompile Include="OPC\Solution\Triangle.cpp" />
+    <ClCompile Include="SOLID.cpp" />
+    <ClCompile Include="SRP\Common\Archer.cpp" />
+    <ClCompile Include="SRP\Common\Warrior.cpp" />
+    <ClCompile Include="SRP\Initial\EnemySpawner.cpp" />
+    <ClCompile Include="SRP\Solution\EnemyFactory.cpp" />
+    <ClCompile Include="SRP\Solution\EnemySelector.cpp" />
+    <ClCompile Include="SRP\Solution\EnemySpawnerSolution.cpp" />
+    <ClCompile Include="SRP\Solution\IntervalSpawner.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DIP\Common\Configuration.h" />
+    <ClInclude Include="DIP\Initial\ConfigurationGateway.h" />
+    <ClInclude Include="DIP\Initial\Consumer.h" />
+    <ClInclude Include="DIP\Solution\BinaryConfigurationGateway.h" />
+    <ClInclude Include="DIP\Solution\IConfigurationGateway.h" />
+    <ClInclude Include="DIP\Solution\Consumer.h" />
+    <ClInclude Include="DIP\Solution\DIPMain.h" />
+    <ClInclude Include="DIP\Solution\XMLConfigurationGateway.h" />
+    <ClInclude Include="ISP\Initial\IUserDataStorage.h" />
+    <ClInclude Include="ISP\Solution\IUserDataGetter.h" />
+    <ClInclude Include="ISP\Solution\IUserDataSetter.h" />
+    <ClInclude Include="LSP\Initial\LSPConsumer.h" />
+    <ClInclude Include="LSP\Initial\Rectangle.h" />
+    <ClInclude Include="LSP\Initial\Square.h" />
+    <ClInclude Include="LSP\Solution\Area.h" />
+    <ClInclude Include="LSP\Solution\Rectangle.h" />
+    <ClInclude Include="LSP\Solution\Square.h" />
+    <ClInclude Include="OPC\Initial\RenderSystem.h" />
+    <ClInclude Include="OPC\Initial\Square.h" />
+    <ClInclude Include="OPC\Initial\Triangle.h" />
+    <ClInclude Include="OPC\Solution\Figure.h" />
+    <ClInclude Include="OPC\Solution\RenderSystem.h" />
+    <ClInclude Include="OPC\Solution\Square.h" />
+    <ClInclude Include="OPC\Solution\Triangle.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="SRP\Common\Archer.h" />
+    <ClInclude Include="SRP\Common\Enemy.h" />
+    <ClInclude Include="SRP\Common\EnemyTypes.h" />
+    <ClInclude Include="SRP\Common\Warrior.h" />
+    <ClInclude Include="SRP\Initial\EnemySpawner.h" />
+    <ClInclude Include="SRP\Solution\EnemyFactory.h" />
+    <ClInclude Include="SRP\Solution\EnemySelector.h" />
+    <ClInclude Include="SRP\Solution\EnemySpawnerSolution.h" />
+    <ClInclude Include="SRP\Solution\IntervalSpawner.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

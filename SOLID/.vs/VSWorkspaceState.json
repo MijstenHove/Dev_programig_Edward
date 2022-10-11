@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DIP",
+    "\\DIP\\Common",
+    "\\DIP\\Initial",
+    "\\DIP\\Solution",
+    "\\LSP\\Initial",
+    "\\LSP\\Solution",
+    "\\OPC\\Initial",
+    "\\OPC\\Solution"
+  ],
+  "SelectedNode": "\\DIP\\Solution\\DIPMain.cpp",
+  "PreviewInSolutionExplorer": false
+}

@@ -8,7 +8,7 @@ private:
 	std::vector<Controller> controllers;
 public:
 	void HandelEvent(const Event*);
-	void AddController(Controller);
+	void AddController(Controller*);
 
 };
 

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\SRP">
+      <UniqueIdentifier>{3b6eb15b-eb01-435f-a348-590e570ef1fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SRP\Common">
+      <UniqueIdentifier>{92e7d85a-c6c3-4163-8db1-346a363f8cc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SRP\Initial">
+      <UniqueIdentifier>{acdb2f1b-b5a7-47ea-8782-c835889d9912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SRP\Solution">
+      <UniqueIdentifier>{0e306b9e-62c6-4637-b0b0-91c7a8f6babf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OCP">
+      <UniqueIdentifier>{84103823-abe0-45e8-94b5-80efae931ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OCP\Initial">
+      <UniqueIdentifier>{838c505f-26e2-48ba-a41f-0791b207327c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OCP\Solution">
+      <UniqueIdentifier>{290eecf7-11b2-4213-9d76-ff4e687a10b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LSP">
+      <UniqueIdentifier>{5f733c95-8b0e-40f4-aea1-4a29a2778788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LSP\Initial">
+      <UniqueIdentifier>{bc6f1e4f-d651-49a9-8e38-f281ab217f33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LSP\Solution">
+      <UniqueIdentifier>{86c202ea-fea8-4a53-a6b1-ac85f478f9ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ISP">
+      <UniqueIdentifier>{bdbcbf94-a11f-45ce-89b1-2c6f3211bd56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ISP\Initial">
+      <UniqueIdentifier>{1894653a-cda2-4266-b644-d99984692931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ISP\Solution">
+      <UniqueIdentifier>{964a41fb-0d13-43e4-9522-727d11699197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DIP">
+      <UniqueIdentifier>{a29b0422-c620-483f-8a38-4fe756aa2069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DIP\Initial">
+      <UniqueIdentifier>{aa6a9885-4b8f-4472-98b0-5495fa5f74ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DIP\Common">
+      <UniqueIdentifier>{1ee374af-4976-47ab-82c6-eb9158b913ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DIP\Solution">
+      <UniqueIdentifier>{b6c47998-cfca-48af-a25b-478a3329267b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SOLID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Solution\EnemyFactory.cpp">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Solution\EnemySelector.cpp">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Solution\EnemySpawnerSolution.cpp">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Solution\IntervalSpawner.cpp">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Initial\EnemySpawner.cpp">
+      <Filter>Source Files\SRP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Common\Warrior.cpp">
+      <Filter>Source Files\SRP\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SRP\Common\Archer.cpp">
+      <Filter>Source Files\SRP\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Initial\RenderSystem.cpp">
+      <Filter>Source Files\OCP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Initial\Square.cpp">
+      <Filter>Source Files\OCP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Initial\Triangle.cpp">
+      <Filter>Source Files\OCP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Solution\RenderSystem.cpp">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Solution\Square.cpp">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Solution\Triangle.cpp">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC\Solution\Figure.cpp">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="LSP\Initial\Square.cpp">
+      <Filter>Source Files\LSP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="LSP\Initial\Rectangle.cpp">
+      <Filter>Source Files\LSP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="LSP\Initial\LSPConsumer.cpp">
+      <Filter>Source Files\LSP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="LSP\Solution\Square.cpp">
+      <Filter>Source Files\LSP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="LSP\Solution\Rectangle.cpp">
+      <Filter>Source Files\LSP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Initial\ConfigurationGateway.cpp">
+      <Filter>Source Files\DIP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Initial\Consumer.cpp">
+      <Filter>Source Files\DIP\Initial</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Common\Configuration.cpp">
+      <Filter>Source Files\DIP\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Solution\BinaryConfigurationGateway.cpp">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Solution\Consumer.cpp">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Solution\DIPMain.cpp">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClCompile>
+    <ClCompile Include="DIP\Solution\XMLConfigurationGateway.cpp">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SRP\Solution\IntervalSpawner.h">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Solution\EnemyFactory.h">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Solution\EnemySelector.h">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Solution\EnemySpawnerSolution.h">
+      <Filter>Source Files\SRP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Initial\EnemySpawner.h">
+      <Filter>Source Files\SRP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Common\EnemyTypes.h">
+      <Filter>Source Files\SRP\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Common\Warrior.h">
+      <Filter>Source Files\SRP\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Common\Archer.h">
+      <Filter>Source Files\SRP\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SRP\Common\Enemy.h">
+      <Filter>Source Files\SRP\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Initial\Square.h">
+      <Filter>Source Files\OCP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Initial\RenderSystem.h">
+      <Filter>Source Files\OCP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Initial\Triangle.h">
+      <Filter>Source Files\OCP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Solution\Triangle.h">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Solution\RenderSystem.h">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Solution\Square.h">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC\Solution\Figure.h">
+      <Filter>Source Files\OCP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="LSP\Initial\Square.h">
+      <Filter>Source Files\LSP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="LSP\Initial\Rectangle.h">
+      <Filter>Source Files\LSP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="LSP\Initial\LSPConsumer.h">
+      <Filter>Source Files\LSP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="LSP\Solution\Square.h">
+      <Filter>Source Files\LSP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="LSP\Solution\Rectangle.h">
+      <Filter>Source Files\LSP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="LSP\Solution\Area.h">
+      <Filter>Source Files\LSP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="ISP\Initial\IUserDataStorage.h">
+      <Filter>Source Files\ISP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="ISP\Solution\IUserDataGetter.h">
+      <Filter>Source Files\ISP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="ISP\Solution\IUserDataSetter.h">
+      <Filter>Source Files\ISP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Initial\ConfigurationGateway.h">
+      <Filter>Source Files\DIP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Initial\Consumer.h">
+      <Filter>Source Files\DIP\Initial</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Common\Configuration.h">
+      <Filter>Source Files\DIP\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Solution\IConfigurationGateway.h">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Solution\BinaryConfigurationGateway.h">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Solution\Consumer.h">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Solution\DIPMain.h">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClInclude>
+    <ClInclude Include="DIP\Solution\XMLConfigurationGateway.h">
+      <Filter>Source Files\DIP\Solution</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
