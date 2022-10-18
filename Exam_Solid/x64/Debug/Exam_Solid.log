@@ -1,0 +1,19 @@
+﻿  Configuration.cpp
+  Enemy.cpp
+  OCPMain.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.h(7,43): error C2065: 'Enemy': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.h(7,36): error C2923: 'std::vector': 'Enemy' is not a valid template type argument for parameter '_Ty'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.h(7): message : see declaration of 'Enemy'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.h(7,36): error C2976: 'std::vector': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vector(496): message : see declaration of 'std::vector'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(9,27): error C2664: 'void OCPMain::PrintEnemiesHelth(const std::vector &)': cannot convert argument 1 from 'std::vector<Enemy,std::allocator<Enemy>>' to 'const std::vector &'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(9,27): message : Reason: cannot convert from 'std::vector<Enemy,std::allocator<Enemy>>' to 'const std::vector'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(9,20): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.h(7,7): message : see declaration of 'OCPMain::PrintEnemiesHelth'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(12,16): error C2511: 'void OCPMain::PrintEnemiesHelth(const std::vector<Enemy,std::allocator<Enemy>> &)': overloaded member function not found in 'OCPMain'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.h(3): message : see declaration of 'OCPMain'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(15,29): warning C4474: 'printf' : too many arguments passed for format string
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(15,29): message : placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(18,35): warning C4474: 'printf' : too many arguments passed for format string
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\Exam_Solid\OCPMain.cpp(18,35): message : placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  Generating Code...
