@@ -128,14 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Configuration.h" />
-    <ClInclude Include="DipMain.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Ex1_Main.h" />
+    <ClInclude Include="Ex1_SaveOnDisk.h" />
+    <ClInclude Include="LSP_Main.h" />
     <ClInclude Include="OCPMain.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Configuration.cpp" />
-    <ClCompile Include="DipMain.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Ex1_Main.cpp" />
+    <ClCompile Include="Ex1_SaveOnDisk.cpp" />
+    <ClCompile Include="LSP_Main.cpp" />
     <ClCompile Include="OCPMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
