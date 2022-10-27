@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include "GameObject.h"
+#include "InputManager.h"
 class GameEngine
 {
 private: 
@@ -19,7 +20,7 @@ private:
 
 	//------EVENTS
 	void HandelEvents();
-
+	InputManager im; 
 	//-------RENDEr
 	void Render();
 

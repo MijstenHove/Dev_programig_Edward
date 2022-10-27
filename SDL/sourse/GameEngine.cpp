@@ -63,6 +63,8 @@ void GameEngine::Quit() {
 void GameEngine::Run() {
 	while (isRunning)
 	{
+		im.Listen();
+		isRunning = !im.getQuitEvent();
 		HandelEvents();
 		//Update();
 		Render();
