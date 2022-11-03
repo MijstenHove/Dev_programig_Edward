@@ -1,7 +1,63 @@
 ﻿  GameEngine.cpp
-  SDL.vcxproj -> C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\binaries\x64Debug\SDL.exe
-  0 File(s) copied
-  0 File(s) copied
-  0 File(s) copied
-  0 File(s) copied
-  0 File(s) copied
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.h(17,1): error C2143: syntax error: missing ';' before 'public'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.h(18,56): error C2969: syntax error: ';': expected member function definition to end with '}'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(5,7): error C2059: syntax error: '<class-head>'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(6,1): error C2630: ';' found in what should be a comma-separated list
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(7,1): error C2059: syntax error: 'private'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(28,1): error C2059: syntax error: 'public'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(4,1): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(5,2): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(6,1): error C2550: 'GameEngine': constructor initializer lists are only allowed on constructor definitions
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(10,1): warning C4508: 'GameEngine': function should return a value; 'void' return type assumed
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(12,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(14,2): error C3861: 'InitSDL': identifier not found
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(16,2): error C3861: 'InitWindowAndRenderer': identifier not found
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(18,2): error C2065: 'logo': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(18,19): error C2065: 'renderer': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(21,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(32,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(35,43): error C2065: 'windowWidth': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(35,56): error C2065: 'windowHeight': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(35,89): error C2065: 'window': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(35,98): error C2065: 'renderer': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(54,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(56,22): error C2065: 'renderer': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(57,20): error C2065: 'window': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(63,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(64,9): error C2065: 'isRunning': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(66,3): error C2065: 'im': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(67,3): error C2065: 'isRunning': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(67,16): error C2065: 'im': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(68,3): error C3861: 'HandelEvents': identifier not found
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(70,3): error C3861: 'Render': identifier not found
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(75,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(80,4): error C2065: 'isRunning': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(86,6): error C2653: 'GameEngine': is not a class or namespace name
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(89,25): error C2065: 'renderer': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(90,18): error C2065: 'renderer': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(91,17): error C2065: 'renderer': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(91,27): error C2065: 'logo': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(91,42): error C2065: 'logo': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(91,60): error C2065: 'logo': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.cpp(94,20): error C2065: 'renderer': undeclared identifier
+  InputManager.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.h(17,1): error C2143: syntax error: missing ';' before 'public'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.h(18,56): error C2969: syntax error: ';': expected member function definition to end with '}'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.cpp(4,6): error C2222: unexpected type 'void': a base-class or member was expected
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.cpp(4,20): error C2061: syntax error: identifier 'Listen'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.cpp(4,29): error C2630: ';' found in what should be a comma-separated list
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.cpp(39,47): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+  Main.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.h(17,1): error C2143: syntax error: missing ';' before 'public'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.h(18,56): error C2969: syntax error: ';': expected member function definition to end with '}'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(5,7): error C2059: syntax error: '<class-head>'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(6,1): error C2630: ';' found in what should be a comma-separated list
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(7,1): error C2059: syntax error: 'private'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\GameEngine.h(28,1): error C2059: syntax error: 'public'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\Main.cpp(5,2): error C2065: 'GameEngine': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\Main.cpp(5,13): error C2146: syntax error: missing ';' before identifier 'game'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\Main.cpp(5,13): error C3861: 'game': identifier not found
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\Main.cpp(6,2): error C2065: 'game': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\Main.cpp(7,2): error C2065: 'game': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\Main.cpp(8,2): error C2065: 'game': undeclared identifier
+  Generating Code...
