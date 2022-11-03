@@ -13,13 +13,14 @@ class InputManager
 private:
 	std::unordered_map<int32_t, KayState> kays;
 	int mousex, mousey;
-	bool quitEvent
+	bool quitEvent;
 public:
-	InputManager() :quitEvent(false), mousex(0), mousey(0);
+	InputManager() :quitEvent(false), mousex(0), mousey(0) {}
 	void Listen();
 	bool CheckKayState(Sint32 kay, KayState state);
 	int GetMousex();
 	int GetMousey();
-	int GetQuit();
+	int GetQuitEvent();
+
 };
 

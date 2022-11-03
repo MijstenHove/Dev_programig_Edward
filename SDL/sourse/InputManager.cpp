@@ -54,7 +54,7 @@ int InputManager::GetMousey()
 	return mousey;
 }
 
-int InputManager::GetQuit()
+int InputManager::GetQuitEvent()
 {
 	return quitEvent;
 }
