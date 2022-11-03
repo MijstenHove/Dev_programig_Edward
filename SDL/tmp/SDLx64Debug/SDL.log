@@ -1,5 +1,8 @@
 ﻿  GameEngine.cpp
   Main.cpp
+  Scene.cpp
+  SceneManager.cpp
+  SplashScreenScene.cpp
   Generating Code...
   SDL.vcxproj -> C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\binaries\x64Debug\SDL.exe
   0 File(s) copied

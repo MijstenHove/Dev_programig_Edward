@@ -8,13 +8,19 @@ PRESSED = 4,    // the kay is pressed
 UP = 8,        //frame kay is released
 RELEASED = 16 //released
 };
+
+#define IM InputManager::GetInstance()
+
 class InputManager
 {
 private:
 	std::unordered_map<int32_t, KayState> kays;
 	int mousex, mousey;
 	bool quitEvent;
+
+	static InputManager* instanse;
 public:
+	static InputManager* GetInstance();
 	InputManager() :quitEvent(false), mousex(0), mousey(0) {}
 	void Listen();
 	bool CheckKayState(Sint32 kay, KayState state);

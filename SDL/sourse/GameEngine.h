@@ -2,6 +2,9 @@
 #include <SDL.h>
 #include "GameObject.h"
 #include "InputManager.h"
+#include "SceneManager.h"
+#include "SplashScreenScene.h"
+
 class GameEngine
 {
 private: 
@@ -32,5 +35,10 @@ public:
 	void Run();
 	void Quit();
 	
+
+	void Test() {
+		SceneManager::GetInstance();
+		//SM;
+	}
 };
 

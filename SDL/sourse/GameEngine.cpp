@@ -61,12 +61,21 @@ void GameEngine::Quit() {
 }
 
 void GameEngine::Run() {
-	while (isRunning)
+	//befor game loop
 	{
-		im.Listen();
-		isRunning = !im.GetQuitEvent();
+		SplashScreenScene* s3 = new SplashScreenScene;
+		SM->AddScene("Splach screen", s3);
+		SM->SetScene("Splach screen");
+	}
+	
+	
+	//game loop
+	while (isRunning){
+		IM->Listen();
+		isRunning = !IM->GetQuitEvent();
 		HandelEvents();
-		//Update();
+		SM->GetCurrentScene()->Update(0.0f);
+		SM->GetCurrentScene()->Render();
 		Render();
 	}
 
