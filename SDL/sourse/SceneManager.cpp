@@ -8,7 +8,6 @@ SceneManager::SceneManager() {
 
 //adds a agregations to the scene  map 
 void SceneManager::AddScene(std::string name, Scene* scene) {
-
 	scenes.emplace(name,scene);
 }
  
@@ -25,9 +24,11 @@ Scene* SceneManager::GetScene(std::string name) {
 	
 	return scenefound ? scenes[name] : nullptr;
 }
+
 Scene* SceneManager::GetCurrentScene() {
 	return currendScene;
 }
+
 void SceneManager::SetScene(std::string name) {
 	auto scene = scenes.find(name);
 
@@ -35,8 +36,9 @@ void SceneManager::SetScene(std::string name) {
 	// stops the code to warn the dev 
 	assert(scenefound);
 	if (scenefound){
-		if(currendScene!= nullptr)
+		if (currendScene != nullptr) {
 			currendScene->OnExit();
+		}
 		currendScene = scene->second;
 		currendScene->OnEnter();
 	}

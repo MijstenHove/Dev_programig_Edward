@@ -23,7 +23,6 @@
     <ClCompile Include="sourse\GameObject.cpp" />
     <ClCompile Include="sourse\InputManager.cpp" />
     <ClCompile Include="sourse\Main.cpp" />
-    <ClCompile Include="sourse\Scene.cpp" />
     <ClCompile Include="sourse\SceneManager.cpp" />
     <ClCompile Include="sourse\SplashScreenScene.cpp" />
   </ItemGroup>

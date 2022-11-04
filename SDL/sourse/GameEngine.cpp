@@ -68,7 +68,6 @@ void GameEngine::Run() {
 		SM->SetScene("Splach screen");
 	}
 	
-	
 	//game loop
 	while (isRunning){
 		IM->Listen();
@@ -78,7 +77,6 @@ void GameEngine::Run() {
 		SM->GetCurrentScene()->Render();
 		Render();
 	}
-
 }
 
 void GameEngine::HandelEvents() {

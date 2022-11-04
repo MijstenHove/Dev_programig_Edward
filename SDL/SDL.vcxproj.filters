@@ -30,9 +30,6 @@
     <ClCompile Include="sourse\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sourse\Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="sourse\SplashScreenScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
