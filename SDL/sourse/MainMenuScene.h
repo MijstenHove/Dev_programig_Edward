@@ -1,11 +1,14 @@
 #include "Scene.h"
 #include "UIText.h"
-#include "SDL_ttf.h"
+#include <SDL_ttf.h>
+#include "InputManager.h"
 #include <cassert>
 class MainMenuScene : public Scene {
 private:
 	UIText sampleText;
 	TTF_Font* fond;
+	float buttonAngle;
+
 public:
 
 	virtual void Update(float dt) override;
