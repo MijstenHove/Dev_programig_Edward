@@ -1,5 +1,7 @@
 ﻿  GameEngine.cpp
-  SceneManager.cpp
+  Main.cpp
+  MainMenuScene.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\MainMenuScene.cpp(8,43): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
   SDL.vcxproj -> C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\binaries\x64Debug\SDL.exe
   0 File(s) copied

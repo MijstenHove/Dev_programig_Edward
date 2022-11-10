@@ -5,7 +5,7 @@ void SplashScreenScene::Update(float dt){
 		SM->SetScene("MainMenu");
 }
 
-void SplashScreenScene::Render(){
+void SplashScreenScene::Render(SDL_Renderer*){
 
 }
 

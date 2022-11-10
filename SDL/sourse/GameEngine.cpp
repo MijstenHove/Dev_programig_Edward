@@ -63,22 +63,26 @@ void GameEngine::Quit() {
 void GameEngine::Run() {
 	//befor game loop
 	{
-		SplashScreenScene* s3 = new SplashScreenScene;
-		SM->AddScene("Splach screen", s3);
-		SM->SetScene("Splach screen");
+		SM->AddScene("Splach screen", new SplashScreenScene());
+		SM->AddScene("main Menu", new MainMenuScene());
+		SM->SetScene("main Menu");
 	}
 	
 	//game loop
 	while (isRunning){
 		IM->Listen();
 		isRunning = !IM->GetQuitEvent();
-		HandelEvents();
 		SM->GetCurrentScene()->Update(0.0f);
-		SM->GetCurrentScene()->Render();
-		Render();
+		//renderer
+		SDL_SetRenderDrawColor(renderer, 100, 0, 0, 225);
+		SDL_RenderClear(renderer);
+		SM->GetCurrentScene()->Render(renderer);
+		SDL_RenderPresent(renderer);
+		//Render();
 	}
 }
 
+// word niet meer gebruikt 
 void GameEngine::HandelEvents() {
 	SDL_Event evt;
 

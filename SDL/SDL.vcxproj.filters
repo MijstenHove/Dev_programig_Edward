@@ -33,6 +33,9 @@
     <ClCompile Include="sourse\SplashScreenScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sourse\MainMenuScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sourse\GameEngine.h">
@@ -51,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sourse\SplashScreenScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sourse\MainMenuScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sourse\UIText.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
