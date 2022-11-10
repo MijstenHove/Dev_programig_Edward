@@ -1,8 +1,26 @@
 #include "MainMenuScene.h"
 void  MainMenuScene::Update(float dt) {
+	//check if the mouse is inside the render rect 
+	
+	
+	int width = 30 * sampleText.text.length();
+	int hight = 50;
+	
 
+	int x = sampleText.position[0] - width / 2;
+	int y = sampleText.position[1] - width / 2;
 
+	int mouseX = IM->GetMousex();
+	int mouseY = IM->GetMousey();
 
+	//AABB Axes Alingd Bounding Box
+	bool isinsideAABBX = mouseX > x && mouseX < x + width;
+	bool isinsideAABBY = mouseY > y && mouseX < y + width;
+
+	if (isinsideAABBX && isinsideAABBY)
+		buttonAngle+= 0.1f;
+	else
+		buttonAngle = 0;
 }
 
 void MainMenuScene::Render(SDL_Renderer* renderer) {
@@ -32,7 +50,7 @@ void MainMenuScene::Render(SDL_Renderer* renderer) {
 
 		// renderer , target texture, texture part, we want to draw,
 		//where to draw en what size, angle, center of sprite , flip sprite 
-		SDL_RenderCopyEx(renderer, texture, NULL, &renderRect, 0, NULL, SDL_FLIP_NONE);
+		SDL_RenderCopyEx(renderer, texture, NULL, &renderRect, buttonAngle, NULL, SDL_FLIP_NONE);
 
 		SDL_FreeSurface(surface);
 		SDL_DestroyTexture(texture);
@@ -49,6 +67,8 @@ void MainMenuScene::OnEnter() {
 	sampleText.text = "hola! "; 
 	sampleText.position[0] = 250;
 	sampleText.position[1] = 250;
+
+	buttonAngle = 0;
 }
 
 void MainMenuScene::OnExit() {}

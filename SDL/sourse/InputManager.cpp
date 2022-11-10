@@ -22,7 +22,7 @@ void InputManager::Listen() {
 	
 	//process SDL and save events in a COLA
 	//mouse
-	//SDL_GETMouseSTATE(&mousex, &mouseY);
+	SDL_GetMouseState(&mousex, &mousey);
 
 	SDL_Event evt; 
 
