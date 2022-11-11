@@ -1,5 +1,9 @@
-﻿  InputManager.cpp
-C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\InputManager.cpp(46,47): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+﻿  GameEngine.cpp
+  Main.cpp
+  MainMenuScene.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\MainMenuScene.cpp(6,43): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\sourse\MainMenuScene.cpp(36,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   SDL.vcxproj -> C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL\binaries\x64Debug\SDL.exe
   0 File(s) copied
   0 File(s) copied

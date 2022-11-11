@@ -2,6 +2,7 @@
 #include "UIText.h"
 #include <SDL_ttf.h>
 #include "InputManager.h"
+#include "SceneManager.h"
 #include <cassert>
 class MainMenuScene : public Scene {
 private:

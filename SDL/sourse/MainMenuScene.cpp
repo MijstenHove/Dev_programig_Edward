@@ -17,8 +17,14 @@ void  MainMenuScene::Update(float dt) {
 	bool isinsideAABBX = mouseX > x && mouseX < x + width;
 	bool isinsideAABBY = mouseY > y && mouseX < y + width;
 
-	if (isinsideAABBX && isinsideAABBY)
+	if (isinsideAABBX && isinsideAABBY){
 		buttonAngle+= 0.1f;
+		if (IM->CheckKayState(SDLK_j, PRESSED)) {
+			SM->SetScene("splash screen");
+			
+		}
+	}
+
 	else
 		buttonAngle = 0;
 }
@@ -50,7 +56,7 @@ void MainMenuScene::Render(SDL_Renderer* renderer) {
 
 		// renderer , target texture, texture part, we want to draw,
 		//where to draw en what size, angle, center of sprite , flip sprite 
-		SDL_RenderCopyEx(renderer, texture, NULL, &renderRect, buttonAngle, NULL, SDL_FLIP_NONE);
+		SDL_RenderCopyEx(renderer, texture, NULL, &renderRect, sin(buttonAngle *(3.14f * 2.0f)/ 180.0f) * 10, NULL, SDL_FLIP_NONE);
 
 		SDL_FreeSurface(surface);
 		SDL_DestroyTexture(texture);
