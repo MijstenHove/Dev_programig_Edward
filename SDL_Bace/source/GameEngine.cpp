@@ -8,6 +8,30 @@ GameEngine::GameEngine(int x, int y)
 void GameEngine::Init() {
 	InitSDL();
 	InitWindowAndRenderer();
+	//load still image
+	SDL_Surface* surface = IMG_Load("resources/logo.png");
+		assert(surface);
+
+		SI_Texture = SDL_CreateTextureFromSurface(renderer, surface);
+		assert(SI_Texture);
+
+		SI_TargetRect = SDL_Rect{ 0,0,255,255};
+
+
+		SDL_FreeSurface(surface);
+		//load moving image 
+		surface = IMG_Load("resources/hero_walk.png");
+			assert(surface);
+
+		MI_Texture = SDL_CreateTextureFromSurface(renderer, surface);
+		assert(MI_Texture);
+		MI_TargetRect = SDL_Rect{ 300,0,588, 708 };
+		//MI_sourceRect = SDL_Rect{ frameX* width, frameX * width,588, 708 };
+		MI_sourceRect = SDL_Rect{ 0,0,588, 708 };
+		MI_Rows = 1;
+		MI_Cols = 10;
+		MI_Frames = 10;
+		MI_CurrentFrame = 0;
 }
 
 //Ensures that SDL is working and it can run
@@ -43,6 +67,45 @@ void GameEngine::Quit() {
 
 //Game loop
 void GameEngine::Run() {
+	while (!quit) {
+
+		SDL_Event e;
+		while (SDL_PollEvent(&e) != 0);
+		{
+			quit = e.type == SDL_QUIT;
+		}
+
+		float Deltatime;
+		Deltatime = (float)(SDL_GetPerformanceCounter() - MI_LastGameTime) / SDL_GetPerformanceFrequency();
+		MI_LastGameTime = SDL_GetPerformanceCounter();
+		std::cout << Deltatime << std::endl;
+	// clear screen
+		SDL_RenderClear(renderer);
+		//render still image 
+		SDL_RenderCopy(renderer, SI_Texture, NULL, &SI_TargetRect);
+		// upadte moving img
+		MI_CurrentFrameTime += Deltatime;
+		int frameIncrement = (int)(MI_CurrentFrameTime / MI_MaxFrameTime);
+
+		MI_CurrentFrameTime = ((MI_CurrentFrameTime / MI_MaxFrameTime) - (float)frameIncrement)* MI_MaxFrameTime;
+		MI_CurrentFrame = (MI_CurrentFrame + frameIncrement) % MI_Frames;
+		int frameX = MI_CurrentFrame % MI_Cols;
+		int frameY = MI_CurrentFrame / MI_Cols;
+
+		
+
+		MI_sourceRect = { MI_sourceRect.w * frameX,
+			MI_sourceRect.h * frameY,
+			MI_sourceRect.w,
+			MI_sourceRect.h
+		};
+
+		//render moving img 
+		SDL_RenderCopy(renderer, MI_Texture, &MI_sourceRect, &MI_TargetRect);
+		//render screen
+		SDL_RenderPresent(renderer);
+	}
+
 }
 
 

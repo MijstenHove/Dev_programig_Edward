@@ -1,0 +1,8 @@
+﻿  GameEngine.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\GameEngine.cpp(80,46): warning C4244: '=': conversion from 'Uint64' to 'float', possible loss of data
+  SDL.vcxproj -> C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\binaries\x64Debug\SDL.exe
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied

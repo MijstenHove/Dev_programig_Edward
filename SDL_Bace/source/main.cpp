@@ -1,7 +1,7 @@
 #include "GameEngine.h"
 
 int main(int argc, char* args[]) {
-	GameEngine game(500, 500);
+	GameEngine game(700, 700);
 	game.Init();
 	game.Run();
 	game.Quit();
