@@ -34,7 +34,7 @@ private:
 	int MI_Rows, MI_Cols, MI_Frames, MI_CurrentFrame;
 	float MI_LastGameTime = 0.0f,
 		MI_CurrentFrameTime = 1.f, 
-		MI_MaxFrameTime = 1.f/3.f;
+		MI_MaxFrameTime = 1.f/10.f;
 
 
 	bool quit = false; 

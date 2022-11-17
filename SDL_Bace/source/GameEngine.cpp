@@ -20,18 +20,23 @@ void GameEngine::Init() {
 
 		SDL_FreeSurface(surface);
 		//load moving image 
-		surface = IMG_Load("resources/hero_walk.png");
+		surface = IMG_Load("resources/spritesheet.png");
 			assert(surface);
 
 		MI_Texture = SDL_CreateTextureFromSurface(renderer, surface);
 		assert(MI_Texture);
-		MI_TargetRect = SDL_Rect{ 300,0,588, 708 };
-		//MI_sourceRect = SDL_Rect{ frameX* width, frameX * width,588, 708 };
-		MI_sourceRect = SDL_Rect{ 0,0,588, 708 };
-		MI_Rows = 1;
-		MI_Cols = 10;
-		MI_Frames = 10;
+	
+		MI_Rows = 9;
+		MI_Cols = 17;
+		MI_Frames = 9 * 17 - 3;
 		MI_CurrentFrame = 0;
+		MI_TargetRect = SDL_Rect{ -500,0,
+			1000,
+			1000};
+		//MI_sourceRect = SDL_Rect{ frameX* width, frameX * width,588, 708 };
+		MI_sourceRect = SDL_Rect{ 0,0,
+			surface->w / MI_Cols, 
+			surface->h / MI_Rows };
 }
 
 //Ensures that SDL is working and it can run
