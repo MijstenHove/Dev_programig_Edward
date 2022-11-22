@@ -56,9 +56,49 @@ void Inerpolator::Update(float dt){
 		ForceMax();
 	else if (value <= 0.f)
 		ForceMin();
+	else
+	{
+		switch (mode)
+		{
+		case SIN: 
+			value = sin(value * PI * 0.5f);
+			break;
+		case COS:
+			value = 1.f - cos(value * PI * 0.5f);
+			break;
+		case SMOOTH:
+			value = value * value * (3.f - 0.2f * value);
+			break;
+		case LINEAR:
+			break;
+		}
+		inverse = 1.f - value;
+	}
+
 
 }
 
 float Inerpolator::GetValue() {
 	return value; 
+}
+
+float Inerpolator::GetInverse() {
+	return inverse;
+
+}
+
+bool Inerpolator::IsMax() {
+	return value > 1 - e;
+}
+
+bool Inerpolator::IsMaxPrecise() {
+	return state == MAX;
+}
+
+bool Inerpolator::IsMin() {
+	return value < e;
+}
+
+bool Inerpolator::IsMinPrecise() {
+	return state == MIN;
 }

@@ -79,12 +79,13 @@ void GameEngine::Run() {
 		IM->Listen();
 
 
-		if (IM->CheckKeyState(SDLK_r, PRESSED)) {
+		if (R->IsMinPrecise()) {
 			std::cout << R->GetValue() << std::endl;
 			R->ToMax();
 		}
-		else
+		else if (R->IsMaxPrecise()) {
 			R->ToMin();
+		}
 
 		if (IM->CheckKeyState(SDLK_g, PRESSED))
 			G->ToMax();

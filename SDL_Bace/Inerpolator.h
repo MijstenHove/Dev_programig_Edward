@@ -1,5 +1,7 @@
 #pragma once
-
+#include <algorithm>
+#include <cmath>
+ #define PI 3.1416f
 enum InerpolatorMode
 {
 	LINEAR,
