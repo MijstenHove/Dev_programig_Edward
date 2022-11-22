@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Inerpolator.cpp" />
     <ClCompile Include="source\GameEngine.cpp" />
     <ClCompile Include="source\InputManager.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Inerpolator.h" />
     <ClInclude Include="source\GameEngine.h" />
     <ClInclude Include="source\InputManager.h" />
   </ItemGroup>

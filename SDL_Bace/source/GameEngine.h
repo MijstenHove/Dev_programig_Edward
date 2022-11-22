@@ -4,6 +4,7 @@
 #include <cassert>
 #include <SDL_image.h>
 #include <iostream>
+#include "../Inerpolator.h"
 class GameEngine {
 private:
 	//------ EXECUTION CONTROL
@@ -21,6 +22,11 @@ private:
 
 	//------ RENDER
 	void Render();
+
+	Inerpolator* R;
+	Inerpolator* G;
+	Inerpolator* B;
+
 	
 	//--------------- still image 
 	SDL_Texture* SI_Texture;

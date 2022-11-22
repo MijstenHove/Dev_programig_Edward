@@ -3,6 +3,9 @@
 GameEngine::GameEngine(int x, int y)
 	: windowWidth(x), windowHeight(y), isRunning(true)
 {
+	R = new Inerpolator(3.f);
+	G = new Inerpolator(3.f);
+	B = new Inerpolator(1.f);
 }
 #pragma region INITIALIZATION
 void GameEngine::Init() {
@@ -72,45 +75,39 @@ void GameEngine::Quit() {
 
 //Game loop
 void GameEngine::Run() {
-	while (!quit) {
+	while (!IM->GetQuitEvent()) {
+		IM->Listen();
 
-		SDL_Event e;
-		while (SDL_PollEvent(&e) != 0);
-		{
-			quit = e.type == SDL_QUIT;
+
+		if (IM->CheckKeyState(SDLK_r, PRESSED)) {
+			std::cout << R->GetValue() << std::endl;
+			R->ToMax();
 		}
+		else
+			R->ToMin();
 
-		float Deltatime;
-		Deltatime = (float)(SDL_GetPerformanceCounter() - MI_LastGameTime) / SDL_GetPerformanceFrequency();
-		MI_LastGameTime = SDL_GetPerformanceCounter();
-		std::cout << Deltatime << std::endl;
-	// clear screen
+		if (IM->CheckKeyState(SDLK_g, PRESSED))
+			G->ToMax();
+		else
+			G->ToMin();
+		if (IM->CheckKeyState(SDLK_b, PRESSED))
+			B->ToMax();
+		else
+			B->ToMin();
+
+		R->Update(0.001f);
+		G->Update(0.001f);
+		B->Update(0.001f);
+
+		SDL_SetRenderDrawColor(renderer,
+			(int)(R->GetValue() * 255.f),
+			(int)(G->GetValue() * 255.f),
+			(int)(B->GetValue() * 255.f),
+			255);
+
 		SDL_RenderClear(renderer);
-		//render still image 
-		SDL_RenderCopy(renderer, SI_Texture, NULL, &SI_TargetRect);
-		// upadte moving img
-		MI_CurrentFrameTime += Deltatime;
-		int frameIncrement = (int)(MI_CurrentFrameTime / MI_MaxFrameTime);
-
-		MI_CurrentFrameTime = ((MI_CurrentFrameTime / MI_MaxFrameTime) - (float)frameIncrement)* MI_MaxFrameTime;
-		MI_CurrentFrame = (MI_CurrentFrame + frameIncrement) % MI_Frames;
-		int frameX = MI_CurrentFrame % MI_Cols;
-		int frameY = MI_CurrentFrame / MI_Cols;
-
-		
-
-		MI_sourceRect = { MI_sourceRect.w * frameX,
-			MI_sourceRect.h * frameY,
-			MI_sourceRect.w,
-			MI_sourceRect.h
-		};
-
-		//render moving img 
-		SDL_RenderCopy(renderer, MI_Texture, &MI_sourceRect, &MI_TargetRect);
-		//render screen
 		SDL_RenderPresent(renderer);
 	}
-
 }
 
 
