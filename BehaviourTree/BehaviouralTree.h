@@ -5,12 +5,12 @@ class BehaviouralTree
 {
 	// binarytree
 public:
-	BehaviouralTree();
+	BehaviouralTree(Node* rootnode);
 	~BehaviouralTree();
 	Node* Search(int value);
 	void PreOrder();
 	void InOrder();
-	void PostOrder();
+	void PostOrder(Node* node);
 	bool Exists(int value);
 
 private:
