@@ -9,8 +9,14 @@ GameEngine::GameEngine(int x, int y)
 }
 #pragma region INITIALIZATION
 void GameEngine::Init() {
+
 	InitSDL();
 	InitWindowAndRenderer();
+
+	//audio
+	AudioManager::GetInstance()->LoadSFX("shrek");
+	AudioManager::GetInstance()->LoadMusic("helicopter");
+
 	//load still image
 	SDL_Surface* surface = IMG_Load("resources/logo.png");
 		assert(surface);
@@ -108,6 +114,17 @@ void GameEngine::Run() {
 
 		SDL_RenderClear(renderer);
 		SDL_RenderPresent(renderer);
+
+
+		while (!IM->GetQuitEvent())
+		{
+			IM->Listen();
+
+			if (IM->CheckKeyState(SDLK_SPACE,DOWN)) {
+				AudioManager::GetInstance()->PlaySFX("shrik", 1);
+			
+			}
+		}
 	}
 }
 

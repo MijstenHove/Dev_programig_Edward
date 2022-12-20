@@ -5,6 +5,8 @@
 #include <SDL_image.h>
 #include <iostream>
 #include "../Inerpolator.h"
+
+#include "AudioManager.h"
 class GameEngine {
 private:
 	//------ EXECUTION CONTROL
