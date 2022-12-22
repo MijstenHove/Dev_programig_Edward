@@ -1,6 +1,5 @@
 #pragma once
 #include <SDL_mixer.h>
-
 #include <unordered_map>
 #include <string>
 #include <cassert>
@@ -27,5 +26,8 @@ public:
 
 	void PlaySFX(std::string name, int repetition);
 	void PlayMusic(std::string name, int repetition);
+
+	bool Setmuted(bool muted);
+	bool Getmuted(bool muted);
 };
 

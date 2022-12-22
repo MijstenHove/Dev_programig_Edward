@@ -1,1 +1,18 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(439,5): error MSB8020: The build tools for v143 (Platform Toolset = 'v143') cannot be found. To build using the v143 build tools, please install v143 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  AudioManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\utility(415,10): error C2079: 'std::pair<const std::string,Mix_Music>::second' uses undefined struct '_Mix_Music'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(30): message : see reference to class template instantiation 'std::pair<const std::string,Mix_Music>' being compiled
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(68,27): error C2664: 'void Mix_FreeChunk(Mix_Chunk *)': cannot convert argument 1 from '_Mix_Music' to 'Mix_Chunk *'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(68,27): message : use of undefined type '_Mix_Music'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\dependencies\SDL2_mixer-2.0.4\include\SDL_mixer.h(143,16): message : see declaration of '_Mix_Music'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\dependencies\SDL2_mixer-2.0.4\include\SDL_mixer.h(182,30): message : see declaration of 'Mix_FreeChunk'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(76,4): error C2561: 'AudioManager::Setmuted': function must return a value
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(72): message : see declaration of 'AudioManager::Setmuted'
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(84,4): error C2561: 'AudioManager::Setmuted': function must return a value
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\AudioManager.cpp(72): message : see declaration of 'AudioManager::Setmuted'
+  GameEngine.cpp
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\GameEngine.cpp(77,2): error C2065: 'AM': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\GameEngine.cpp(78,2): error C2065: 'AM': undeclared identifier
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\GameEngine.cpp(137,18): error C2084: function 'void GameEngine::Init(void)' already has a body
+C:\Users\mijst\Documents\Git\Dev_programing_Edward\SDL_Bace\source\GameEngine.cpp(11): message : see previous definition of 'Init'
+  main.cpp
+  Generating Code...

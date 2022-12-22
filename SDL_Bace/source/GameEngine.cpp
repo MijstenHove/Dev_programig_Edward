@@ -74,6 +74,9 @@ void GameEngine::InitWindowAndRenderer() {
 
 //Destroys all windows and renderers adn the quits SDL
 void GameEngine::Quit() {
+	AM->UnLoadSFX("shrek");
+	AM->UnLoadMusic("helicopter");
+	
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
@@ -102,6 +105,9 @@ void GameEngine::Run() {
 		else
 			B->ToMin();
 
+
+
+		//____________________________________
 		R->Update(0.001f);
 		G->Update(0.001f);
 		B->Update(0.001f);
@@ -127,5 +133,3 @@ void GameEngine::Run() {
 		}
 	}
 }
-
-

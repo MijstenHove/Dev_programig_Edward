@@ -4,7 +4,7 @@ AudioManager* AudioManager::instance = nullptr;
 
 AudioManager::AudioManager() {
 	assert(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2024) != -1);
-
+	isMuted = false;
 }
 
 AudioManager* AudioManager::GetInstance() {
@@ -47,7 +47,49 @@ void AudioManager::PlaySFX(std::string name, int repetition) {
 
 
 void AudioManager::PlayMusic(std::string name, int repetition) {
-	//assert(music.find(name) != music.end());
-	//Mix_FadeInMusic(music[name], -1, 200);
+	assert(music.find(name) != music.end());
+	Mix_FadeInMusic(music[name], -1, 200);
 
+}
+
+void AudioManager::UnLoadSFX(std::string name)
+{
+	assert(sfx.find(name) != sfx.end());
+
+	//Mix_FreeChunk(sfx[name]);
+	sfx.erase(name);
+
+}
+
+void AudioManager::UmLoadMusic(std::string name)
+{
+	assert(music.find(name) != music.end());
+
+	Mix_FreeChunk(music[name]);
+	music.erase(name);
+
+}
+bool AudioManager::Setmuted(bool muted)
+{
+	if (isMuted) {
+		if (this->isMuted)
+			return;
+		Mix_Volume(-1, 0);
+		Mix_VolumeMusic(0);
+		this->isMuted = true;
+	}
+	else
+	{
+		if (this->isMuted)
+			return;
+
+		Mix_Volume(-1, MIX_MAX_VOLUME);
+		Mix_VolumeMusic(MIX_MAX_VOLUME);
+		this->isMuted = false;
+	}
+}
+
+bool AudioManager::Getmuted(bool muted) 
+{
+	return muted;
 }
